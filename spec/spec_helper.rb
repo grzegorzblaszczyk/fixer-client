@@ -3,6 +3,7 @@ require "pry"
 require 'vcr'
 require 'simplecov'
 require 'simplecov-cobertura'
+require 'simplecov-console'
 require 'webmock'
 require 'webmock/rspec'
 
@@ -17,6 +18,7 @@ else
 end
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::Console,
   SimpleCov::Formatter::HTMLFormatter,
   SimpleCov::Formatter::CoberturaFormatter
 ])
