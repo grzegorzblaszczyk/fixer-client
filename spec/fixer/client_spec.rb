@@ -13,7 +13,7 @@ RSpec.describe Fixer::Client do
 
   describe "#latest" do 
     it "gets latest Fixer.io rates for PLN, USD, GBP for base EUR currecy" do
-      stub_request(:any, "data.fixer.io")
+      stub_request(:any, "data.fixer.io") unless ENV["VCR_OFF"] == "1"
       fixer_client = Fixer::Client.latest
       result = fixer_client.fetch(["PLN", "USD", "GBP"])
       expect(result["success"]).to eql true
