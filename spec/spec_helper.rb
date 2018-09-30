@@ -1,6 +1,13 @@
 require "bundler/setup"
-require "fixer/client"
 require "pry"
+require 'vcr'
+require 'webmock'
+require 'webmock/rspec'
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.hook_into :webmock
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

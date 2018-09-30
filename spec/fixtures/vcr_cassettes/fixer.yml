@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://data.fixer.io/api/latest?access_key=invalid_key&symbols=PLN,USD,GBP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.fixer.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 30 Sep 2018 15:44:30 GMT
+      Content-Type:
+      - application/json; Charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      X-Apilayer-Transaction-Id:
+      - 71e2d6ae-f615-4ab8-9b50-11912c31ba48
+      Last-Modified:
+      - Sun, 30 Sep 2018 15:29:05 GMT
+      Etag:
+      - f573595b0b28261744592c09bea0d24f
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Time:
+      - '0.038'
+    body:
+      encoding: UTF-8
+      string: '{"success":true,"timestamp":1538321345,"base":"EUR","date":"2018-09-30","rates":{"PLN":4.286358,"USD":1.162149,"GBP":0.891903}}'
+    http_version: 
+  recorded_at: Sun, 30 Sep 2018 15:44:30 GMT
+recorded_with: VCR 4.0.0

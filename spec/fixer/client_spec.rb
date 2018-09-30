@@ -1,9 +1,19 @@
-# require 'pry'
+require_relative '../spec_helper'
 require 'fixer/client'
 
-describe Fixer::Client do
+RSpec.describe Fixer::Client do
+
+  before do
+    VCR.insert_cassette 'fixer'
+  end
+
+  after do
+    VCR.eject_cassette
+  end
+
   describe "#latest" do 
     it "gets latest Fixer.io rates for PLN, USD, GBP for base EUR currecy" do
+      stub_request(:any, "data.fixer.io")
       fixer_client = Fixer::Client.latest
       result = fixer_client.fetch(["PLN", "USD", "GBP"])
       expect(result["success"]).to eql true
