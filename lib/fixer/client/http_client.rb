@@ -8,25 +8,19 @@ module Fixer
   module Client
     class HttpClient
 
-      BASE_URI = "http://data.fixer.io/api"
+      BASE_URI = "http://data.fixer.io/api".freeze
       SCOPES = [
     	  :latest,
         :historical
   	  ].freeze
+
+      CONFIG_FILE = "config/fixerio_client.yml".freeze
     	
   	  def initialize(scope = :latest)
         raise ::ArgumentError.new unless SCOPES.include?(scope)
   	    @scope = scope
-
-        config_file = "config/fixerio_client.yml"
-        @config = File.exist?(config_file) ? YAML.load_file(config_file) : default_config
-
-        @api_key = nil
-        if Kernel.const_defined?("Rails") && !Rails.env.nil? && @config["enabled_environments"].include?(Rails.env)
-          @api_key = @config["api_key"]
-        else
-          @api_key = @config["api_key"]
-        end
+        @config = read_config
+        @api_key = get_api_key
   	  end 
 
   	  def fetch(symbols = [], date = nil)
@@ -56,11 +50,21 @@ module Fixer
           end
         end
 
+        def read_config
+          File.exist?(CONFIG_FILE) ? YAML.load_file(CONFIG_FILE) : default_config
+        end
+
         def default_config
           hash = {}
           hash["api_key"] = 'invalid_key'
           hash["enabled_environments"] = ['production', 'deelopment', 'test']
           hash
+        end
+
+        def get_api_key
+          return nil if Kernel.const_defined?("Rails") && !Rails.env.nil? && !@config["enabled_environments"].include?(Rails.env)
+          return nil if @config.nil? 
+          @config["api_key"]
         end
     end
   end
