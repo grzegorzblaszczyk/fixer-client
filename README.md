@@ -1,9 +1,7 @@
 # Fixer::Client
 
 [![Build Status](https://travis-ci.org/grzegorzblaszczyk/fixerio-client.svg?branch=master)](https://travis-ci.org/grzegorzblaszczyk/fixerio-client)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/beca7c860bad3aaed7ef/maintainability)](https://codeclimate.com/github/grzegorzblaszczyk/fixerio-client/maintainability)
-
 [![Test Coverage](https://api.codeclimate.com/v1/badges/beca7c860bad3aaed7ef/test_coverage)](https://codeclimate.com/github/grzegorzblaszczyk/fixerio-client/test_coverage)
 
 Get latest or historic currency rates for base EUR from api.fixer.io
