@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "fixer/client/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "fixer_client"
+  spec.name          = "fixerio_client"
   spec.version       = Fixer::Client::VERSION
   spec.authors       = ["Grzegorz Błaszczyk"]
   spec.email         = ["grzegorz.blaszczyk@gmail.com"]
 
   spec.summary       = "Get latest or historic currency rates for base EUR from api.fixer.io"
   spec.description   = "Get latest or historic currency rates for base EUR from api.fixer.io"
-  spec.homepage      = "https://github.com/grzegorzblaszczyk/fixer-client"
+  spec.homepage      = "https://github.com/grzegorzblaszczyk/fixerio-client"
   spec.license       = "MIT"
 
   # Specify which files should be added to the gem when it is released.

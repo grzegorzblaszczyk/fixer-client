@@ -1,7 +1,7 @@
 *.gem
 *.rbc
 /.config
-/config/fixer_client.yml
+/config/fixerio_client.yml
 /coverage/
 /InstalledFiles
 /pkg/

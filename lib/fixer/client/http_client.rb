@@ -18,7 +18,7 @@ module Fixer
         raise ::ArgumentError.new unless SCOPES.include?(scope)
   	    @scope = scope
 
-        @config = YAML.load_file("config/fixer_client.yml")
+        @config = YAML.load_file("config/fixerio_client.yml")
 
         @api_key = nil
         if Kernel.const_defined?("Rails") && !Rails.env.nil? && @config["enabled_environments"].include?(Rails.env)
