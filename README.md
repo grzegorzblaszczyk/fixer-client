@@ -1,5 +1,7 @@
 # Fixer::Client
 
+[![Build Status](https://travis-ci.org/grzegorzblaszczyk/fixerio-client.svg?branch=master)](https://travis-ci.org/grzegorzblaszczyk/fixerio-client)
+
 Get latest or historic currency rates for base EUR from api.fixer.io
 
 To experiment with our code, run `bin/console` for an interactive prompt.
