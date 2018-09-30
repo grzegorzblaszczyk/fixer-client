@@ -1,6 +1,7 @@
 *.gem
 *.rbc
 /.config
+/config/fixer_client.yml
 /coverage/
 /InstalledFiles
 /pkg/

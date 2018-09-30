@@ -1,0 +1,6 @@
+# Fixer Client
+
+# Usage of Fixer.io API requires a key
+api_key: 'some_api_key'
+
+enabled_environments: ['production', 'deelopment', 'test']
