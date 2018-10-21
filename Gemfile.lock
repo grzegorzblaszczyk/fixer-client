@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fixerio_client (0.1.3)
+    fixerio_client (0.1.4)
 
 GEM
   remote: https://rubygems.org/
