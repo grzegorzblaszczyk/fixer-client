@@ -18,7 +18,7 @@ module Fixer
     	
   	  def initialize(scope = :latest)
         raise ::ArgumentError.new unless SCOPES.include?(scope)
-  	    @scope = scope
+        @scope = scope
         @config = read_config
         @api_key = get_api_key
   	  end 
