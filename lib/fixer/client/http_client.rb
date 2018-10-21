@@ -57,7 +57,7 @@ module Fixer
         def default_config
           hash = {}
           hash["api_key"] = 'invalid_key'
-          hash["enabled_environments"] = ['production', 'deelopment', 'test']
+          hash["enabled_environments"] = ['production', 'development', 'test']
           hash
         end
 

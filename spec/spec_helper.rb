@@ -6,6 +6,7 @@ require 'simplecov-cobertura'
 require 'simplecov-console'
 require 'webmock'
 require 'webmock/rspec'
+require './spec/helpers/read_config_helpers'
 
 
 unless ENV["VCR_OFF"] == "1"
@@ -31,6 +32,8 @@ RSpec.configure do |config|
 
   # Disable RSpec exposing methods globally on `Module` and `main`
   config.disable_monkey_patching!
+
+  config.include ReadConfigHelpers
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
