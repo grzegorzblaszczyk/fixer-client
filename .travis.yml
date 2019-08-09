@@ -4,8 +4,10 @@ env:
 language: ruby
 cache: bundler
 rvm:
-  - 2.2.3
-  - 2.5.1
+  - 2.3.8
+  - 2.4.6
+  - 2.5.5
+  - 2.6.3
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
