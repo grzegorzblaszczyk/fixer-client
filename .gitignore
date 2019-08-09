@@ -1,5 +1,6 @@
 *.gem
 *.rbc
+/.rspec_status
 /.config
 /config/fixerio_client.yml
 /coverage/
