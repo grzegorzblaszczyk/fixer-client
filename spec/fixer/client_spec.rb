@@ -11,7 +11,7 @@ RSpec.describe Fixer::Client do
     VCR.eject_cassette
   end
 
-  describe "#latest" do 
+  describe "#latest" do
     it "gets latest Fixer.io rates for PLN, USD, GBP for base EUR currecy" do
       stub_request(:any, "data.fixer.io") unless ENV["VCR_OFF"] == "1"
       fixer_client = Fixer::Client.latest
@@ -20,8 +20,11 @@ RSpec.describe Fixer::Client do
       expect(result["timestamp"]).to be > 0
       expect(result["rates"]).not_to eql nil
       expect(result["rates"]["PLN"]).to be > 1
+      expect(result["rates"]["PLN"]).to be < 10
       expect(result["rates"]["USD"]).to be > 0
+      expect(result["rates"]["USD"]).to be < 10
       expect(result["rates"]["GBP"]).to be > 0
+      expect(result["rates"]["GBP"]).to be < 10
     end
 
 	  it "fails to get Fixer.io rates for PLN, USD, GBP for base EUR currecy for specific date using #latest client" do
@@ -32,11 +35,11 @@ RSpec.describe Fixer::Client do
 	  end
   end
 
-  describe "#historical" do 
+  describe "#historical" do
     it "fails to get historical Fixer.io rates for PLN, USD, GBP for base EUR currecy - not yet implemented" do
       fixer_client = Fixer::Client.historical
       expect {
-        fixer_client.fetch(["PLN", "USD", "GBP"])     
+        fixer_client.fetch(["PLN", "USD", "GBP"])
       }.to raise_error(ArgumentError)
     end
   end
