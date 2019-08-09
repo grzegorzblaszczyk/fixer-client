@@ -34,7 +34,7 @@ results = fixer.fetch(["USD", "GBP"])
 It gives result like:
 
 ```ruby
-=> {"success"=>true, "timestamp"=>1538261947, "base"=>"EUR", "date"=>"2018-09-29", "rates"=>{"GBP"=>0.891903, "USD"=>1.162149}} 
+=> {"success"=>true, "timestamp"=>1538261947, "base"=>"EUR", "date"=>"2018-09-29", "rates"=>{"GBP"=>0.891903, "USD"=>1.162149}}
 ```
 
 ## Development
@@ -45,7 +45,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Testing
 
-By default all requests to api.fixer.io are stubbed and VCR gem is used to replay HTTP responses.
+By default all requests to https://api.fixer.io are stubbed and VCR gem is used to replay HTTP responses.
 If you want to send real requests, please copy `config/fixerio_client.yml.sample` to `config/fixerio_client.yml` and put your real API key there.
 Then run:
 
