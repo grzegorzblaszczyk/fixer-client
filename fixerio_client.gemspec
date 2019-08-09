@@ -31,5 +31,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "simplecov-console", "~> 0.4.0"
   spec.add_development_dependency "simplecov-cobertura", "~> 1.3.0"
   spec.add_development_dependency "vcr", "~> 4.0.0"
-  spec.add_development_dependency "webmock", "~> 3.4.2"
+  spec.add_development_dependency "webmock", "~> 3.6.2"
 end
