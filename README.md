@@ -53,7 +53,7 @@ By default all requests to (https://api.fixer.io) are stubbed and VCR gem is use
 If you want to send real requests, please copy `config/fixerio_client.yml.sample` to `config/fixerio_client.yml` and put your real API key there.
 Then run:
 
-```
+```bash
 VCR_OFF=1 rspec spec
 ```
 
