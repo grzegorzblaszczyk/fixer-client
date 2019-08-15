@@ -49,7 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Testing
 
-By default all requests to https://api.fixer.io are stubbed and VCR gem is used to replay HTTP responses.
+By default all requests to (https://api.fixer.io) are stubbed and VCR gem is used to replay HTTP responses.
 If you want to send real requests, please copy `config/fixerio_client.yml.sample` to `config/fixerio_client.yml` and put your real API key there.
 Then run:
 
