@@ -18,11 +18,15 @@ gem 'fixerio_client'
 
 And then execute:
 
-    $ bundle
+```bash
+bundle
+```
 
 Or install it yourself as:
 
-    $ gem install fixerio_client
+```bash
+gem install fixerio_client
+```
 
 ## Usage
 
