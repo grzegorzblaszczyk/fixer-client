@@ -75,7 +75,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.17.3)
+  bundler (>= 2.2.10)
   fixerio_client!
   pry (~> 0.11.0)
   rake (~> 13.0)
@@ -87,4 +87,4 @@ DEPENDENCIES
   webmock (~> 3.6.2)
 
 BUNDLED WITH
-   1.17.3
+   2.2.17
